@@ -88,7 +88,7 @@ public class ControllerActivity extends AppCompatActivity {
 
         togglePTP.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                togglePTP.setEnabled(true);
+                togglePTP.setEnabled(false);
                 if (isChecked) {
                     // The toggle is enabled
                     String status = "on";
@@ -148,15 +148,14 @@ public class ControllerActivity extends AppCompatActivity {
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     }
-
                 }
-                togglePTP.setEnabled(false);
+                togglePTP.setEnabled(true);
             }
         });
         toggleBuffer = (ToggleButton) findViewById(R.id.toggleBuffer);
         toggleBuffer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                toggleBuffer.setEnabled(true);
+                toggleBuffer.setEnabled(false);
                 if (isChecked) {
                     // The toggle is enabled
                     String status = "on";
@@ -217,13 +216,13 @@ public class ControllerActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                toggleBuffer.setEnabled(false);
+                toggleBuffer.setEnabled(true);
             }
         });
         toggleDecoder = (ToggleButton) findViewById(R.id.toggleDecoder);
         toggleDecoder.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                toggleDecoder.setEnabled(true);
+                toggleDecoder.setEnabled(false);
                 if (isChecked) {
                     // The toggle is enabled
                     String status = "on";
@@ -285,7 +284,7 @@ public class ControllerActivity extends AppCompatActivity {
                     }
 
                 }
-                toggleDecoder.setEnabled(false);
+                toggleDecoder.setEnabled(true);
             }
         });
     }
